@@ -15,10 +15,7 @@ angular.module('todomvc', ['ngRoute'])
 			resolve: {
 				store: function (todoStorage) {
 					// Get the correct module (API or localStorage).
-					return todoStorage.then(function (module) {
-						module.get(); // Fetch the todo records in the background.
-						return module;
-					});
+					return todoStorage;
 				}
 			}
 		};
