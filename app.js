@@ -3,7 +3,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var preston = require('preston');
 
-mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost:27017');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017');
 var Todo = mongoose.model('Todo', new mongoose.Schema({
   title: String,
   completed: Boolean
